@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: mytutum
+    labels:
+        zone: prod
+        version: v1
+    namespace: test
+spec:
+    containers:
+       - name: mytutumapp
+         image: tutum/hello-world
+         ports:
+         - containerPort: 80
